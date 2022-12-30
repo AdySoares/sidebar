@@ -13,9 +13,28 @@
   --secondary-color: hsl(var(--hue), 48%, 70%);
   --Bg-color: #fff
 }
+body{
+  display: flex;
+  gap: 1.8rem;
+}
 
 .sidebar{
-  width: 250px;
+  width: 25rem;
   height: 100vh;
+  
   background-color: var(--primary-color);
+}
+.sidebar{
+  display: flex;
+  flex-direction: column;
+
+  padding: 2.4rem 1.4rem 0;
+}
+
+.sidebar .sidebarHeader{
+  
+}
+
+nav ul{
+  list-style: none;
 }

@@ -11,29 +11,61 @@
 </head>
 <body>
 
-  <div class="sidebar">
-    
+  <nav class="sidebar">
     <div class="sidebarHeader">
       <img src="./images/logo.svg" alt="Logo da empresa">
       <button>
         <img src="./images/menu.svg" alt="menu">
       </button>
     </div>
+    
+    <ul>
+        <li class="search">
+          <label for="searchImput"><img src="./images/search.svg" alt="Procurar"></label>
+          <input type="text">
+        </li>
+        
+        <li class="dashboard">
+          <a href="#" target="_blank">
+            <img src="./images/grid.svg" alt="grid">
+            <span>Dashboard</span>
+          </a>
+        </li>
+        
+        <li class="pets">
+          <a href="#" target="_blank">
+            <img src="./images/pet.svg" alt="grid">
+            <span>Pets</span>
+          </a>
+        </li>
+        
+        <li class="clients">
+          <a href="#" target="_blank">
+          <img src="./images/user.svg" alt="grid">
+          <span>Clientes</span>
+        </a>
+      </li>
+      
+      <li class="vets">
+        <a href="#" target="_blank">
+          <img src="./images/grid.svg" alt="grid">
+          <span>Vets</span>
+        </a>
+      </li>
 
-    <div class="search">
-      <label for="searchImput"><img src="./images/search.svg" alt="Procurar"></label>
-      <input type="text">
-    </div>
+      <li class="settings">
+        <a href="#" target="_blank">
+          <img src="./images/settings.svg" alt="grid">
+          <span>Ajustes</span>
+        </a>
+      </li>
 
-    <div class="dashboard">
-      <a href="#" target="_blank">
-        <img src="./images/grid.svg" alt="grid">
-        <span></span>
-      </a>
+    </ul>
+  </nav>
 
-    </div>
-
+  <div id="app">
+    <h1>Dashboard</h1>
   </div>
-  
+
 </body>
 </html>
