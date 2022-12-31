@@ -13,18 +13,20 @@
 
   <nav class="sidebar">
     <div class="sidebarHeader">
+      <figure>
       <img src="./images/logo.svg" alt="Logo da empresa">
-      <button>
+      </figure>
+      <button class="sidebarButton">
         <img src="./images/menu.svg" alt="menu">
       </button>
     </div>
     
+    <div class="search">
+      <label for="searchImput" class=""><img src="./images/search.svg" alt="Procurar"></label>
+      <input type="text" placeholder="Buscar" class=""> 
+    </div>
+    
     <ul>
-        <li class="search">
-          <label for="searchImput"><img src="./images/search.svg" alt="Procurar"></label>
-          <input type="text">
-        </li>
-        
         <li class="dashboard">
           <a href="#" target="_blank">
             <img src="./images/grid.svg" alt="grid">
@@ -59,8 +61,26 @@
           <span>Ajustes</span>
         </a>
       </li>
-
     </ul>
+
+    <footer class="logout">
+
+      <div class="user">
+        <figure>
+          <img src="./images/photo.jpg" alt="Imagem do usuário">
+        </figure>
+        <div class="nameUser">
+          <p>Eleanor Pena</p>
+          <span>Veterinária</span>
+        </div>  
+      </div>
+
+      <button class="sidebarButton">
+        <img src="./images/log-out.svg" alt="Sair">
+      </button>
+
+    </footer>
+
   </nav>
 
   <div id="app">
