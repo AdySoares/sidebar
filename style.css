@@ -18,6 +18,10 @@ body{
   display: flex;
   gap: 1.8rem;
 }
+.sidebar-nav-icon, #searchInput, .user, .sidebar .sidebarHeader figure{
+  opacity: 0;
+  visibility: hidden;
+}
 
 img{
   object-fit: cover;
@@ -25,7 +29,7 @@ img{
 
 .sidebar{
   position: relative;
-  width: fit-content;
+  width: 7.8rem;
   height: 100vh;
   
   background-color: var(--primary-color);
@@ -44,7 +48,14 @@ nav .sidebarHeader{
   justify-content: space-between;
   margin: 0 1.4rem 2.6rem 2.9rem;
 }
-.sidebarButton{
+
+nav #sidebarMenuButton.Off {
+  position: absolute;
+  left: 2.7rem;
+  top: 2.6rem;
+}
+
+#sidebarMenuButton, #logoutButton{
   background: none;
   cursor: pointer;
   border: none;
@@ -61,7 +72,7 @@ nav .sidebarHeader{
   top: 1.3rem;
 }
 
-.search input{
+.search #searchInput{
   width: 100%;
   height: 5.1rem;
   border-radius: 1.5rem;
@@ -111,6 +122,11 @@ nav footer {
   
   padding: .8rem 1.4rem;
 }
+nav footer #logoutButton.Off{
+  position: absolute;
+  left: 2.8rem;
+  bottom: 1.8rem;
+}
 
 nav footer .user{
   display: flex;
@@ -131,7 +147,11 @@ nav footer .user figure img{
   border-radius: 1.2rem;
 }
 
-.hide{
-  opacity: 0;
-  visibility: hidden;
+.sidebar.active{
+  width: fit-content;
+}
+
+.active{
+  opacity: 1;
+  visibility: visible;
 }
