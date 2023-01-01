@@ -17,8 +17,9 @@
 body{
   display: flex;
   gap: 1.8rem;
+  height: 100vh;
 }
-.sidebar-nav-icon, #searchInput, .user, .sidebar .sidebarHeader figure{
+.sidebar-nav-icon, #searchInput, .user, .businessLogo{
   opacity: 0;
   visibility: hidden;
 }
@@ -41,6 +42,8 @@ img{
   
   font-family: 'Poppins', sans-serif;
   text-transform: capitalize;
+
+  transition: all 0.3s ease-in-out;
 }
 
 nav .sidebarHeader{
@@ -49,7 +52,7 @@ nav .sidebarHeader{
   margin: 0 1.4rem 2.6rem 2.9rem;
 }
 
-nav #sidebarMenuButton.Off {
+nav #sidebarMenuButton{
   position: absolute;
   left: 2.7rem;
   top: 2.6rem;
@@ -68,8 +71,7 @@ nav #sidebarMenuButton.Off {
 
 .search label{
   position: absolute;
-  left: 1.3rem;
-  top: 1.3rem;
+  padding: 1.3rem;
 }
 
 .search #searchInput{
@@ -84,22 +86,32 @@ nav #sidebarMenuButton.Off {
 
 nav ul{
   list-style: none;
-  margin-left: 2.9rem;
-  margin-right: 14rem;
+  margin-left: 1.6rem;
+  margin-right: 1.4rem;
 }
 
 nav ul li + li{
-  margin-top: 3.4rem;
+  margin-top: 0.8rem;
 }
 
-nav ul li a{
+.navLinks{
+  width: 100%;
   display: flex;
   align-items: center;
-  gap: 1.3rem;
   text-decoration: none;
   color: var(--fc);
 }
-nav ul li a span, nav footer .user .nameUser p{
+
+.navLinks img{
+  padding: 1.3rem;
+}
+
+.navLinks img.on:hover, .search label.on:hover{
+  background-color: #fff;
+  border-radius: 1.8rem;
+}
+
+.navLinks span, nav footer .user .nameUser p{
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 2.2rem;
@@ -110,11 +122,11 @@ nav footer {
   position: absolute;
   left: 0;
   bottom: 0;
-
+  
   width: 100%;
   height: 6rem;
   background-color: var(--secondary-color);
-
+  
   display: flex;
   gap: 4.7rem;
   justify-content: space-between;
@@ -122,7 +134,8 @@ nav footer {
   
   padding: .8rem 1.4rem;
 }
-nav footer #logoutButton.Off{
+
+nav footer #logoutButton{
   position: absolute;
   left: 2.8rem;
   bottom: 1.8rem;
@@ -147,11 +160,31 @@ nav footer .user figure img{
   border-radius: 1.2rem;
 }
 
+/* Menu interativo aberto */
+
+.active, #searchInput.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.navLinks.on:hover{
+  background-color: #fff;
+  border-radius: 1.8rem;
+}
+
 .sidebar.active{
   width: fit-content;
 }
 
-.active{
-  opacity: 1;
-  visibility: visible;
+#sidebarMenuButton.active, #logoutButton.active{
+  position: static;
 }
+
+#app{
+  overflow-y:auto;
+  max-height: 100vh;
+  width: fit-content;
+}
+
+
+
