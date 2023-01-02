@@ -95,6 +95,7 @@ nav ul li + li{
 }
 
 .navLinks{
+  z-index: 1;
   width: 100%;
   display: flex;
   align-items: center;
@@ -103,6 +104,7 @@ nav ul li + li{
 }
 
 .navLinks img{
+  display: inline-block;
   padding: 1.3rem;
 }
 
